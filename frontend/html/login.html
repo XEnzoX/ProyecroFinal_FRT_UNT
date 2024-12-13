@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/turnos_web_proyecto_final/frontend/css/style_login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/turnos_web_proyecto_final/backend/login_script.php" method="post">
+            <label for="username">Usuario:</label>
+            <input type="text" name="username" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+</body>
+</html>

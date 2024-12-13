@@ -1,0 +1,608 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none !important; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.menu-container {
+  position: relative;
+  width: 100%;
+}
+
+.menu-horizontal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #11121a;
+  padding: 20px;
+  overflow-y: auto; 
+}
+
+.hamburger-menu {
+  display: none; 
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #444;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 100;
+}
+
+.menu-salir {
+  align-self: stretch; 
+  margin-top: auto; 
+}
+
+.menu-salir button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+li.logout {
+  margin-top: 20px; 
+}
+
+.custom-button {
+  margin-top: 10px; 
+}
+
+
+.logo-container .logo {
+  height: 70px;
+  width: auto; 
+}
+
+.sub-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger-menu.open {
+  right: 0; 
+}
+
+.menu-hamburguesa {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  font-size: 30px;
+  color: #fff;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.sub-menu li {
+  margin: 0; 
+}
+
+li.logout, li.active {
+  list-style: none;
+  margin: 10px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+li.logout a, li.active a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #212529; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+li.logout a:hover, li a:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+li.logout a i, li.active a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+li.logout a span, li.active a span {
+  font-weight: 500;
+}
+
+li.active a {
+  background-color: #212529;
+  color: #fff;
+}
+
+
+.sub-menu a {
+  color: rgb(0, 0, 0); 
+  font-size: 18px; 
+  transition: color 0.3s ease; 
+}
+
+
+.menu-salir {
+  margin-top: auto; 
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444040; 
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  outline: none; 
+}
+
+.custom-button:hover {
+  background-color: #212529; 
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button:focus {
+  outline: none; 
+  box-shadow: none; 
+}
+
+.custom-button:active {
+  background-color: #444; 
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+.custom-button i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.custom-button:hover {
+  background-color: #212529; 
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.custom-button .cuadro_col {
+  font-weight: 500;
+}
+
+.custom-button:hover i {
+  transform: scale(1.2); 
+}
+
+.hamburger-menu {
+  text-decoration: none !important; 
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 70%;
+  max-width: 300px;
+  height: 100%;
+  background-color: #444;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+}
+
+
+.hamburger-menu.open {
+  right: 0; 
+}
+
+.hamburger-menu .close-btn {
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  text-align: right;
+  margin-bottom: 20px; 
+}
+
+.hamburger-menu .sub-menu {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px; 
+  width: 100%;
+  align-items: flex-start; 
+}
+
+.hamburger-menu .sub-menu a {
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px; 
+  width: 100%; 
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.hamburger-menu .sub-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #FFD700; 
+}
+
+.overlay {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.open {
+  display: block; 
+  opacity: 1;
+}
+
+.menu-hamburguesa.open ~ .menu-horizontal {
+  margin-top: 80px; 
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 997;
+}
+
+.hamburger-menu.active {
+  display: flex;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.main--content {
+  margin-left: 250px;  
+  padding: 10px; 
+}
+
+.user--info .logo_municipio-2img{
+  width: 2px;
+  height: 0px;
+  cursor: pointer;
+}   
+
+.header--wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #a7adb9;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem; 
+}
+
+.header--title{
+  color: rgb(0, 0, 0);
+}
+
+.user--info{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.card--container{
+  background: #0ebbda;
+  padding: 2rem;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.card--wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.main--title{
+  color: rgb(0, 0, 0);
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+
+.card--container_turnos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #a7adb9;
+  border-radius: 10px;
+  padding: 10px 2rem;
+  margin-bottom: 1rem;
+}
+
+.main--title_turnos {
+  color: #000;
+  margin-bottom: 0; 
+}
+
+
+.datos_turnos p {
+  margin-bottom: 15px;
+}
+
+
+.guardar_turno {
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px 20px; 
+  font-size: 16px;   
+}
+
+
+.menu .generate_pdf{
+  color: #000000;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.menu, .generate_pdf span{
+  overflow: hidden;
+}
+
+.menu .generate_pdf i{
+  font-size: 1.2rem;
+}
+
+
+.card--container_turnos_buscador form {
+  margin-bottom: 20px;
+}
+
+.card--container_turnos_buscador input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px; 
+}
+
+.card--container_turnos_buscador button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card--container_turnos_buscador button:hover {
+  background-color: #0056b3; 
+}
+
+.card--container_turnos_buscador .clear-filters {
+  text-align: right;
+  margin-top: 10px; 
+}
+
+.card--container_turnos_buscador .clear-filters button {
+  padding: 8px 16px;
+  background-color: #dc3545; 
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.card--container_turnos_buscador .clear-filters button:hover {
+  background-color: #c82333; 
+}
+
+.turnos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.turnos-table th, .turnos-table td {
+  padding: 12px; 
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.turnos-table th {
+  background-color: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', sans-serif;
+      overflow-x: hidden; 
+  }
+
+  body.no-scroll {
+      overflow: hidden; 
+      height: 100%;
+  }
+
+  li.active .hove_inicio {
+      background-color: #212529 !important;
+      color: #fff;
+  }
+
+  .hamburger-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 70%;
+      max-width: 300px;
+      height: 100%;
+      background-color: #11121a;
+      padding: 20px;
+      transition: left 0.3s ease;
+      z-index: 11; 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; 
+  }
+
+  .hamburger-menu.open {
+      left: 0; 
+  }
+
+  .menu-hamburguesa {
+      display: block; 
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 30px;
+      color: white;
+      background-color: #11121a;
+      cursor: pointer;
+      z-index: 13; 
+  }
+
+  .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); 
+      z-index: 10; 
+      opacity: 0;
+      transition: opacity 0.3s ease;
+  }
+
+  .overlay.open {
+      display: block;
+      opacity: 1;
+  }
+
+  .sub-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+  }
+
+  .hove_inicio:hover {
+      color: white !important; 
+  }
+
+  .fa-ticket.active hove_inicio{
+      background-color: #212529 !important;
+  }
+
+  .sub-menu li {
+      margin-bottom: 15px;
+      width: 80%; 
+      border: none; 
+      border-radius: 5px;
+      overflow: hidden; 
+  }
+
+  .sub-menu li a,
+  .sub-menu li button {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      display: block;
+      padding: 12px 20px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      border: none;
+  }
+
+  .sub-menu li:first-child,
+  .sub-menu li:nth-child(2),
+  .sub-menu li:nth-child(3) {
+      margin-top: 60px; 
+  }
+
+  .sub-menu li a:hover,
+  .sub-menu li button:hover {
+      background-color: #212529; 
+  }
+
+  .main--content {
+      margin-top: 70px; 
+      margin-left: 0px !important; 
+      z-index: 1; 
+  }
+
+  .menu-horizontal {
+      display: none;
+  }
+
+  .dashboard .btn-salir {
+      width: auto; 
+      height: 40px;
+      padding: 5px 15px; 
+      font-size: 14px; 
+      border-radius: 5px; 
+      background-color: #ff5252; 
+      color: white;
+      border: none; 
+      cursor: pointer; 
+  }
+
+  .dashboard .btn-salir:hover {
+      background-color: #ff0000 ; 
+    }
+}
